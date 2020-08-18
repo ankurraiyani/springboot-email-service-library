@@ -24,11 +24,11 @@ public class SpringbootEmailServiceLibraryApplication {
 		EmailService emailService = context.getBean(EmailService.class);
 		
 		Mail mail = new Mail();
-		mail.setToEmails("ankur@websoptimization.com");
+		mail.setToEmails("harshadc@websoptimization.com");
 		mail.setCcEmails("ankur@websoptimization.com");
 		mail.setSubject("Test Email");
 		mail.setTemplateName("samplemail");
-		mail.setAttachments("src/main/resources/templates/mail/samplemail.html");
+		//mail.setAttachments("src/main/resources/templates/mail/samplemail.html");
 		
 		Map<String, Object> model = new HashMap<>();
 		model.put("message", "Hello World !!");
