@@ -113,11 +113,13 @@ public class EmailService {
 		}
 		
 		//Add attachments
-		for (String attachment : mail.getAttachments()) {
-			FileSystemResource file = new FileSystemResource(attachment);
-			if(file.exists())
-				helper.addAttachment(file.getFilename(), file);
-        }		
+		if(mail.getAttachments() != null) {
+			for (String attachment : mail.getAttachments()) {
+				FileSystemResource file = new FileSystemResource(attachment);
+				if(file.exists())
+					helper.addAttachment(file.getFilename(), file);
+	        }
+		}
 
 		return helper.getMimeMessage();
 	}
