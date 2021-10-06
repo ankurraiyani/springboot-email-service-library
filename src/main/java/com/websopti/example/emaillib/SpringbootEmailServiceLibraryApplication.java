@@ -24,8 +24,8 @@ public class SpringbootEmailServiceLibraryApplication {
 		EmailService emailService = context.getBean(EmailService.class);
 		
 		Mail mail = new Mail();
-		mail.setToEmails("harshadc@websoptimization.com");
-		mail.setCcEmails("ankur@websoptimization.com");
+		mail.setToEmails("ankur@websoptimization.com");
+		mail.setCcEmails("dummy@mailinator.com");
 		mail.setSubject("Test Email");
 		mail.setTemplateName("samplemail");
 		//mail.setAttachments("src/main/resources/templates/mail/samplemail.html");
